@@ -1,5 +1,6 @@
 runtime: go
 api_version: go1
+application: unstdout-blog
 version: 1
 
 handlers:
