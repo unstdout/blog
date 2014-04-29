@@ -10,5 +10,5 @@ func init() {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "The opposite of standard output.")
+	fmt.Fprint(w, "The opposite of standard.")
 }
