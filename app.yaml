@@ -4,5 +4,9 @@ application: unstdout-blog
 version: 1
 
 handlers:
+- url: /
+  static_files: public/index.html
+  upload: public/index.html
+
 - url: /.*
-  script: _go_app
+  static_dir: public
