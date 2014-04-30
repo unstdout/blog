@@ -3,21 +3,32 @@ api_version: go1
 application: unstdout-blog
 version: 1
 
+default_expiration: "30d"
+
 handlers:
 - url: /(.*\.css)
   mime_type: text/css
   static_files: public/\1
   upload: public/(.*\.css)
+  expiration: "1h"
 
 - url: /(.*\.html)
   mime_type: text/html
   static_files: public/\1
   upload: public/(.*\.html)
+  expiration: "1h"
 
 - url: /(.*\.js)
   mime_type: text/javascript
   static_files: public/\1
   upload: public/(.*\.js)
+  expiration: "1h"
+
+- url: /(.*\.json)
+  mime_type: application/json
+  static_files: public/\1
+  upload: public/(.*\.json)
+  expiration: "1h"
 
 - url: /(.*\.txt)
   mime_type: text/plain
@@ -28,21 +39,116 @@ handlers:
   mime_type: application/xml
   static_files: public/\1
   upload: public/(.*\.xml)
+  expiration: "1h"
+
+- url: /(.*\.rss)
+  mime_type: application/rss+xml
+  static_files: public/\1
+  upload: public/(.*\.rss)
+  expiration: "1h"
+
+- url: /(.*\.m4v)
+  mime_type: video/m4v
+  static_files: public/\1
+  upload: public/(.*\.m4v)
+
+- url: /(.*\.mp4)
+  mime_type: video/mp4
+  static_files: public/\1
+  upload: public/(.*\.mp4)
+
+- url: /(.*\.(ogg|oga))
+  mime_type: audio/ogg
+  static_files: public/\1
+  upload: public/(.*\.(ogg|oga))
+
+- url: /(.*\.ogv)
+  mime_type: video/ogg
+  static_files: public/\1
+  upload: public/(.*\.ogv)
+
+- url: /(.*\.ico)
+  mime_type: image/x-icon
+  static_files: public/\1
+  upload: public/(.*\.ico)
+  expiration: "7d"
 
 # images
-- url: /(.*\.(bmp|gif|ico|jpeg|jpg|png))
+- url: /(.*\.(bmp|gif|jpeg|jpg|png))
   static_files: public/\1
-  upload: public/(.*\.(bmp|gif|ico|jpeg|jpg|png))
+  upload: public/(.*\.(bmp|gif|jpeg|jpg|png))
+
+- url: /(.*\.eot)
+  mime_type: application/vnd.ms-fontobject
+  static_files: public/\1
+  upload: public/(.*\.eot)
+
+- url: /(.*\.otf)
+  mime_type: font/opentype
+  static_files: public/\1
+  upload: public/(.*\.otf)
+
+- url: /(.*\.(svg|svgz))
+  mime_type: images/svg+xml
+  static_files: public/\1
+  upload: public/(.*\.(svg|svgz))
+
+- url: /(.*\.swf)
+  mime_type: application/x-shockwave-flash
+  static_files: public/\1
+  upload: public/(.*\.swf)
+
+- url: /(.*\.webm)
+  mime_type: video/webm
+  static_files: public/\1
+  upload: public/(.*\.webm)
+
+- url: /(.*\.webp)
+  mime_type: image/webp
+  static_files: public/\1
+  upload: public/(.*\.webp)
+
+- url: /(.*\.woff)
+  mime_type: application/x-font-woff
+  static_files: public/\1
+  upload: public/(.*\.woff)
+
+- url: /(.*\.pdf)
+  mime_type: application/pdf
+  static_files: public/\1
+  upload: public/(.*\.pdf)
 
 # fonts
-- url: /(.*\.(eot|svg|ttf|woff))
+- url: /(.*\.(ttf))
   static_files: public/\1
-  upload: public/(.*\.(eot|svg|ttf|woff))
+  upload: public/(.*\.(ttf))
+
+# audio files
+- url: /(.*\.(mid|midi|mp3|wav))
+  static_files: public/\1
+  upload: public/(.*\.(mid|midi|mp3|wav))
+
+# windows files
+- url: /(.*\.(doc|exe|ppt|rtf|xls))
+  static_files: public/\1
+  upload: public/(.*\.(doc|exe|ppt|rtf|xls))
+
+# compressed files
+- url: /(.*\.(bz2|gz|rar|tar|tgz|zip))
+  static_files: public/\1
+  upload: public/(.*\.(bz2|gz|rar|tar|tgz|zip))
+
+# index files
+- url: /(.+)/?
+  static_files: public/\1/index.html
+  upload: public/(.+)/index.html
+  expiration: "15m"
 
 # root
 - url: /
   static_files: public/index.html
   upload: public/index.html
+  expiration: "15m"
 
 # everything else
 - url: /.*
