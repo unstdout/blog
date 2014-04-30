@@ -139,7 +139,12 @@ handlers:
   upload: public/(.*\.(bz2|gz|rar|tar|tgz|zip))
 
 # index files
-- url: /(.+)/?
+- url: /(.+)/
+  static_files: public/\1/index.html
+  upload: public/(.+)/index.html
+  expiration: "15m"
+
+- url: /(.+)
   static_files: public/\1/index.html
   upload: public/(.+)/index.html
   expiration: "15m"
