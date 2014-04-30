@@ -1,0 +1,6 @@
+baseurl: "http://www.unstdout.io"
+publishdir: "../public"
+title: "unstdout"
+canonifyurls: true
+permalinks:
+  post: /:year/:month/:day/:slug/
