@@ -13,7 +13,10 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	const INDEX = "/index.html"
 	l := len(r.RequestURI)
 	pos := l - len(INDEX)
-	if pos > 0 && r.RequestURI[pos:] != INDEX {
+	if pos < 0 {
+		pos = 0
+	}
+	if r.RequestURI[pos:] != INDEX {
 		url := r.RequestURI
 		if url[l-1] != '/' {
 			url += "/"
