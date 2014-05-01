@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
       <title>Posts on unstdout </title>
-    <link>http://localhost:1313/post/index.xml</link>
+    <link>http://www.unstdout.io/post/index.xml</link>
     <language>en-US</language>
     <author>Enthusiastic Hugo User</author>
     <rights>Copyright (c) 2014, Enthusiastic Hugo User; all rights reserved.</rights>
@@ -10,10 +10,10 @@
     
     <item>
       <title>The opposite of standard.</title>
-      <link>http://localhost:1313/2014/05/01/unstdout/</link>
+      <link>http://www.unstdout.io/2014/05/01/unstdout/</link>
       <pubDate>Thu, 01 May 2014 00:00:00 UTC</pubDate>
       <author>Enthusiastic Hugo User</author>
-      <guid>http://localhost:1313/2014/05/01/unstdout/</guid>
+      <guid>http://www.unstdout.io/2014/05/01/unstdout/</guid>
       <description>
 
 &lt;p&gt;Hello from Hugo! If you&amp;rsquo;re reading this in your browser, good job! The file &lt;code&gt;content/post/hello-hugo.md&lt;/code&gt; has been
