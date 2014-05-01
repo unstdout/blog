@@ -4,3 +4,6 @@ title: "unstdout"
 canonifyurls: true
 permalinks:
   post: /:year/:month/:day/:slug/
+params:
+  GaTrackingID: "UA-70947-16"
+  GaCookieDomain: "unstdout.io"

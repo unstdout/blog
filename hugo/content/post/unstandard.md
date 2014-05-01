@@ -1,7 +1,8 @@
 ---
-title: "Hello Hugo!"
-description: "Saying 'Hello' from Hugo"
-date: "2014-04-08"
+title: "The opposite of standard."
+slug: “unstdout”
+description: "unstdout"
+date: "2014-05-01"
 categories:
   - "example"
   - "hello"

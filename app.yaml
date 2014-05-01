@@ -13,7 +13,7 @@ handlers:
   expiration: "1h"
 
 - url: /(.*\.html)
-  mime_type: text/html
+  mime_type: text/html; charset=utf-8
   static_files: public/\1
   upload: public/(.*\.html)
   expiration: "1h"
@@ -142,17 +142,20 @@ handlers:
 - url: /(.+)/
   static_files: public/\1/index.html
   upload: public/(.+)/index.html
+  mime_type: text/html; charset=utf-8
   expiration: "15m"
 
 - url: /(.+)
   static_files: public/\1/index.html
   upload: public/(.+)/index.html
+  mime_type: text/html; charset=utf-8
   expiration: "15m"
 
 # root
 - url: /
   static_files: public/index.html
   upload: public/index.html
+  mime_type: text/html; charset=utf-8
   expiration: "15m"
 
 # everything else
