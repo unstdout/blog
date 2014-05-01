@@ -10,7 +10,7 @@ handlers:
   mime_type: text/css
   static_files: public/\1
   upload: public/(.*\.css)
-  expiration: "1h"
+  expiration: "4h"
 
 - url: /(.*\.html)
   mime_type: text/html; charset=utf-8
@@ -22,7 +22,7 @@ handlers:
   mime_type: text/javascript
   static_files: public/\1
   upload: public/(.*\.js)
-  expiration: "1h"
+  expiration: "4h"
 
 - url: /(.*\.json)
   mime_type: application/json
